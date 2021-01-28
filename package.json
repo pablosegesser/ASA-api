@@ -1,11 +1,11 @@
 {
-    "name": "ASA api",
+    "name": "ASA-api",
     "version": "1.0.0",
     "description": "NodeJS + MongoDB API for User Management, Authentication and Registration",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/pablosegesser/ASA-api/"
     },
     "scripts": {
         "start": "node ./server.js",
