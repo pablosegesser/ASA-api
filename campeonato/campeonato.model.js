@@ -3,19 +3,30 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema({
     nombre: { type: String, unique: true, required: true },
-    //hash: { type: String, required: true },
+    image: { type: String },
     fecha: { type: String, required: true },
     lugar: { type: String, required: true },
     descripcion: { type: String, required: true },
     createdDate: { type: Date, default: Date.now },
-    inscriptos: [
+    categoria: {type: String},
+    subcategorias:[
         {
-        nombre: {type:String},
-        apellido: {type: String},
-        edad: {type:Number},
-        id: {type:String}
-    }
-        ]
+            nombre:{type:String},
+            genero: {type: String},
+            edadMax:{type:Number},
+            inscriptos: [
+                {
+                nombre: {type:String},
+                apellido: {type: String},
+                edad: {type:Number},
+                id: {type:String}
+            }
+                ]               
+        }
+    ],
+    genero:{type: String},
+    precio:{type:Number},
+    fechaHasta: {type:Date}
 });
 
 schema.set('toJSON', {

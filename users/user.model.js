@@ -7,7 +7,9 @@ const schema = new Schema({
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     dateOfBirth: {type: Date},
-    createdDate: { type: Date, default: Date.now }
+    createdDate: { type: Date, default: Date.now },
+    isAdmin: {type: Boolean, default:false},
+    genero:{type:String}
 });
 
 schema.set('toJSON', {
